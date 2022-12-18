@@ -1,0 +1,4 @@
+iki 11-28: +1 balas prie kontrolinio;
+  * cycles.js
+  * arrays.js
+  * functions-tasks-1.js

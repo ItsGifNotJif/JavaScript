@@ -1,0 +1,8 @@
+iki 12:05 +1 balas prie kontrolinio;
+  * function-edabit-tasks.js - 7val darbas individualiai sprendžiant funkcijas min. 15 uždavinių
+  * object-tasks.js
+  # ↓↓  Naudojant for, while, if, else ir kitus programavimo konstruktus ↓↓ 
+    * functions-tasks-2.js
+  # ↓↓ Naudojant forEach, map, filter, reduce, pop, push ir kiti Array.prototype metodai
+    * function-tasks-array-iterative-1.js
+    * functions-tasks-2.js -> pervadinti -> functions-tasks-2-array-methods.js

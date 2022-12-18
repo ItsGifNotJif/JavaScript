@@ -1,0 +1,3 @@
+Kuriant kintamuosius VISADA naudoti const, nebent keičiama kintamojo reikšmė.
+Naudoti tik griežtus palyginimus "==="
+Naudoti tik "let" ir "const" kintamųjų deklaravimo tipus
