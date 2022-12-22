@@ -1,0 +1,4 @@
+
+Array.prototype.reduce
+Pavyzdžiai su gilios struktūros objektais
+Destruktūrizacija
