@@ -38,7 +38,7 @@ console.group("3. Sukurkite funkciją, kuri atspausdina pirmojo parametro pirmaj
 {
   // Funkcijos deklaravimas
   function printFirstLetter(str) {
-      console.log(str[0]);
+    console.log(str[0]);
   }
   console.log('---');
   console.log("ABCD");
@@ -56,7 +56,7 @@ console.group("4. Sukurkite funkciją, kuri atspausdina pirmojo parametro paskut
 {
   // Funkcijos deklaravimas
   function printLastLetter(str) {
-    let lastIndex = str.length-1;
+    let lastIndex = str.length - 1;
     console.log(str[lastIndex]);
   }
   console.log('---');
@@ -141,10 +141,10 @@ console.group("9. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 
 {
   function containsLetterA(str) {
     let indexOfA = str.indexOf("a");
-    if(indexOfA === -1){
-      return false 
-    }else{
-      return true 
+    if (indexOfA === -1) {
+      return false
+    } else {
+      return true
     }
   }
   console.log('---');
@@ -162,10 +162,10 @@ console.group("10. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra
 {
   function containsLetter(str, letter) {
     let checkForIndex = str.indexOf(letter);
-    if(checkForIndex === -1){
-      return false 
-    }else{
-      return true 
+    if (checkForIndex === -1) {
+      return false
+    } else {
+      return true
     }
   }
   console.log('---');
@@ -183,9 +183,9 @@ console.group("11. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra
 {
   function isEvenNumberOfLetters(str) {
     let stringLength = str.length
-    if(stringLength%2 === 0){
-      return true 
-    }else{
+    if (stringLength % 2 === 0) {
+      return true
+    } else {
       return false
     }
   }
@@ -225,13 +225,13 @@ console.group("13. Sukurkite funkciją, kuri grąžina priebalsių kiekį žodyj
   function getNumberOfConsonants(str) {
     let defineConsonant = /[^aąeęėyiįouųū]/g;
     let foundConsonant = str.match(defineConsonant)
-    if(foundConsonant == null){
+    if (foundConsonant == null) {
       return 0;
     }
     let consonantCount = foundConsonant.length
     return consonantCount;
   }
-  
+
   console.log('---');
   console.log({
     'sasasasa': getNumberOfConsonants('sasasasa'),
@@ -264,11 +264,11 @@ console.group("15. Sukurkite funkciją, kuri grąžina 'a' raidžių kiekį žod
 {
   function letterACount(str) {
     let letterCount = 0;
-    for(let i = 0; i < str.length; i++){
-      if(str.charAt(i) == 'a'){
-        letterCount+= 1;
+    for (let i = 0; i < str.length; i++) {
+      if (str.charAt(i) == 'a') {
+        letterCount += 1;
       }
-    }return letterCount;
+    } return letterCount;
   }
   console.log('---');
   console.log({
@@ -285,9 +285,9 @@ console.group("16. Sukurkite funkciją, kuri grąžina bet kokios raidės kiekį
 {
   function letterCount(str, searchLetter) {
     let letterCount = 0;
-    for(let i = 0; i < str.length; i++){
-      if(str.charAt(i) == searchLetter){
-        letterCount+=1;
+    for (let i = 0; i < str.length; i++) {
+      if (str.charAt(i) == searchLetter) {
+        letterCount += 1;
       }
     } return letterCount;
   }
@@ -358,7 +358,7 @@ console.group("20. Sukurkite funkciją, kuri grąžina indeksų masyvą su visai
 {
   function indexesOfLetter(str, searchLetter) {
     let newArray = str.split("");
-    let filteredArray = newArray.filter(char =>{
+    let filteredArray = newArray.filter(char => {
       return char == searchLetter;
     })
     return filteredArray
@@ -380,8 +380,8 @@ console.group("21. Sukurkite funkciją, kuri ištrintų pirmą surastą 'a' raid
     let indexA = str.indexOf('a');
     let oldArray = str.split('');
     let newArray = oldArray.splice(indexA, 1);
-    return oldArray.join(''); 
-    
+    return oldArray.join('');
+
   }
   console.log('---');
   console.log({
@@ -417,8 +417,8 @@ console.log();
 console.group("23. Sukurkite funkciją, kuri ištrintų visus 'a' raidės pasikartojimus žodyje");
 {
   function removeAllOccurencesOfLetterA(str) {
-      let newString = str.replace(/a/g, "");
-      console.log(newString);
+    let newString = str.replace(/a/g, "");
+    console.log(newString);
   }
   console.log('---');
   console.log({
@@ -453,9 +453,9 @@ console.log();
 console.group("25. Sukurkite funkciją, kuri pirmu parametru priimtų žodį, o antruoju - masyvą su raidėmis.");
 {
   function filterLetters(str, lettersToRemove) {
-   let oldArray = str.split('');
-   let newArray = oldArray.filter(x => !lettersToRemove.includes(x));
-   return newArray.join()
+    let oldArray = str.split('');
+    let newArray = oldArray.filter(x => !lettersToRemove.includes(x));
+    return newArray.join()
   }
   console.log('---');
   const str = filterLetters('Brangakmienio paveikslas', ['a', 'i']);
@@ -525,23 +525,22 @@ console.log();
 console.group("29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra palindromas (taip pat skaitosi iš abiejų pusių)");
 {
   function isPalyndrome(str) {
-    let i = 0;
-    let k = str.length - 1;
-    while (i < k) {
-      if (str[i] !== str[k]) return false;
-      i++;
-      k--;
+    let newArray = str.split("")
+    let reverseArray = newArray.reverse().join("");
+    if (reverseArray == str) {
+      return str + " -> " + true;
+    } else {
+      return str + " -> " + false;
     }
-    return true;
   }
-  // console.log('---');
-  // console.log({
-  //   'mama': isPalyndrome('mama'),
-  //   'mamam': isPalyndrome('mamam'),
-  //   '123321': isPalyndrome('123321'),
-  //   '123456': isPalyndrome('123456'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    'mama': isPalyndrome('mama'),
+    'mamam': isPalyndrome('mamam'),
+    '123321': isPalyndrome('123321'),
+    '123456': isPalyndrome('123456'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -553,48 +552,60 @@ console.log();
 //    mėgstu pieną , bet medų nelabai.labanakt. -> Mėgstu pieną, bet medų nelabai. Labanakt.
 console.group("30. Sukurkite funkciją, kuri taiso pastraipos klaidas");
 {
-
   function capitalizeFirstLetter(str) {
-    // code ...
+    let words = str.split(" ");
+    let firstWord = words[0];
+    if(firstWord){
+      let firstLetterCapitalize = firstWord[0].toUpperCase();
+    let restOfLetters = firstWord.slice(1);
+    let capitalizeFirstChar = firstLetterCapitalize + restOfLetters;
+    words[0] = capitalizeFirstChar;
+    }
+    let finishedSentence = words.join(' ');
+    return finishedSentence;
   }
 
   function splitIntoSentences(paragraph) {
-    /*
-      2.1 Atskirti pagal sakinio baigimo ženklus ir juos įsiminti
-      2.2 Pašalinti tuščius tarpus iš kairės ir dešinės
-      2.3 grąžinti objektą su dviem masyvais:
-      {
-        sentences: [sentence1, sentence2, ... , sentenceN],
-        separator: [ '.', '?', ... , '!'],
-      }
-    */
+    let sentences = paragraph.split(/[.!?]/);
+    let separators = paragraph.match(/[.!?]/g)
+    sentences = sentences.map(sentence => sentence.trim());
+    return { sentences, separators }
   }
 
   function reduceEmptySpaces(str) {
-    // Jūsų sugalvota logika, kaip šalinti tarpus prieš kablelį ir kelis tarpus iš eilės
+    return str.replace(/\s*, \*/g, ", ")
   }
 
   // 1.
   function fixParagraph(paragraph) {
-    /*
-      2. Pirmiausiai suskirstome į sakinius, naudojant splitIntoSentences: 
-            string  ->  {
-                          sentences: [sentence1, sentence2, ... , sentenceN],
-                          separator: [ '.', '?', ... , '!'],
-                        }
-      3. Redaguoti kiekvieną sakinį, naudojant funkciją reduceEmptySpaces
-      4. Redaguoti kiekvieną sakinį, naudojant funkciją capitalizeFirstLetter
-      5. Sujungti sakinius su atitinkamais sakinių skiriamaisiais/baigiamaisiais ženklais
-      6. Grąžinti rezultatą.
-    */
+    let { sentences, separators } = splitIntoSentences(paragraph);
+    sentences = sentences.map(sentence => reduceEmptySpaces(sentence));
+    sentences = sentences.map(sentence => capitalizeFirstLetter(sentence));
+    let fixedParagraph = "";
+    for (let i = 0; i < sentences.length; i++) {
+      fixedParagraph += sentences[i] + separators[i];
+    }
+    return fixedParagraph;
   }
 
-  // const paragraph = '    labas , as jonas . Tave      vadina Kęstu? Taip ir žinojau  !    ';
-  // const fixedParagraph = fixParagraph(paragraph);
-  // console.log(paragraph);
-  // console.log(fixedParagraph);
-  // console.log('---');
+  /*
+    2. Pirmiausiai suskirstome į sakinius, naudojant splitIntoSentences: 
+          string  ->  {
+                        sentences: [sentence1, sentence2, ... , sentenceN],
+                        separator: [ '.', '?', ... , '!'],
+                      }
+    3. Redaguoti kiekvieną sakinį, naudojant funkciją reduceEmptySpaces
+    4. Redaguoti kiekvieną sakinį, naudojant funkciją capitalizeFirstLetter
+    5. Sujungti sakinius su atitinkamais sakinių skiriamaisiais/baigiamaisiais ženklais
+    6. Grąžinti rezultatą.
+  */
 }
+
+const paragraph = '    labas , as jonas . Tave      vadina Kęstu? Taip ir žinojau  !    ';
+const fixedParagraph = fixParagraph(paragraph);
+console.log(paragraph);
+console.log(fixedParagraph);
+console.log('---');
 console.groupEnd();
 console.log();
 
@@ -623,14 +634,14 @@ console.log();
 console.group("32. Sukurkite funkciją, kuri pirmu parametru priimą <string>'ą, o antruoju skiriklį");
 {
   function explode(str, separator) {
-    // code ...
+    return str.split(separator)
   }
-  // console.log('---');
-  // console.log({
-  //   "'Man patinka sniegas', ' '": explode('Man patinka sniegas', ' '),
-  //   "'home/about/13', '/'": explode('home/about/13', '/'),
-  // })
-  // console.log('---');
+  console.log('---');
+  console.log({
+    "'Man patinka sniegas', ' '": explode('Man patinka sniegas', ' '),
+    "'home/about/13', '/'": explode('home/about/13', '/'),
+  })
+  console.log('---');
 }
 console.groupEnd();
 console.log();
