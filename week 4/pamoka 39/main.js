@@ -31,12 +31,12 @@
 6. Po padidinimo, vėl atsispausdinkite objektus ir pažiūrėkite pakitusias Automobilis objektų savybes.
 */
 
-class Automobilis{
-    constructor(brand, model, price){
-        this.brand = brand;
-        this.model = model;
-        this.price = price;
-    }
+class Automobilis {
+  constructor(brand, model, price) {
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
+  }
 }
 const Automobilis1 = new Automobilis("kia", "rio", 2000);
 const Automobilis2 = new Automobilis("bmw", "m3", 22000);
@@ -64,3 +64,44 @@ Automobilis2.price = Automobilis2.price + 100
 Automobilis3.price = Automobilis3.price + 100
 
 console.table(allCars);
+
+
+
+{
+  class Automobilis {
+    constructor(brand, model, price) {
+      this.brand = brand,
+        this.model = model,
+        this.price = price
+    }
+  }
+
+  const car1 = new Automobilis("BMW", "Gina", 10000)
+  const car2 = new Automobilis("Opel;", "Astra", 2000)
+  const car3 = new Automobilis("Volkswagen;", "Passat", 4000)
+
+  console.log(car1)
+  console.log(car2)
+  console.log(car3)
+
+  console.log(car1.model)
+  console.log(car2.model)
+  console.log(car3.model)
+
+  console.log(car1.brand)
+  console.log(car2.brand)
+  console.log(car3.brand)
+
+  console.log(car1.price)
+  console.log(car2.price)
+  console.log(car3.price)
+
+  car1.price = car1.price + 100
+  car2.price = car2.price + 100
+  car3.price = car3.price + 100
+
+  console.log(car1.price)
+  console.log(car2.price)
+  console.log(car3.price)
+}
+
