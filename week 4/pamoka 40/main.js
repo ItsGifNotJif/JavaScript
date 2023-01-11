@@ -134,7 +134,12 @@
 
     console.groupCollapsed("reduce");
     {
-
+        const averageMarks = films.map((film) => {
+            const averageSum = film.ratings.reduce((a, b) => a + b, 0)
+            const avg = averageSum / film.ratings.length;
+            return Math.round(avg)
+        })
+        console.log(averageMarks)
     }
     console.groupEnd()
 
