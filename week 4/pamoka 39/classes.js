@@ -65,7 +65,7 @@
 
 // Klasės savybių ir metodų rašymo tvarka
 /*
-class AXY {
+class ANY {
   Statinės savybės
   Statiniai metodai
   privačios savybės
