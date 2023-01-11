@@ -105,3 +105,8 @@ console.table(allCars);
   console.log(car3.price)
 }
 
+
+
+{
+  
+}

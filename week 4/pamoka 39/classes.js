@@ -48,7 +48,7 @@
 
   // console.table(allCars);
   allCars.forEach(car => car.accelerate(20));
-  // console.table(allCars);
+  // console.table(allCars);.
 
   // myCar.displayColor();
   // myCar.changeColor('red');
