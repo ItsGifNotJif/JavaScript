@@ -65,30 +65,70 @@
     }
     console.groupEnd()
 
-    console.group("filter");
+    console.groupCollapsed("filter");
     {
         const resultFilter = films.filter((film) => {
             return film.year > 2000
         })
-        console.log(resultFilter)
+
+        const filmsWithManyRatings = films.filter((film) => {
+            return film.ratings.length >= 8
+        })
+
+        console.log(resultFilter, filmsWithManyRatings)
     }
     console.groupEnd()
 
     console.groupCollapsed("some");
     {
+        const existsNewFilms = films.some((film) => {
+            return film.year > 2000
+        })
+        console.log(existsNewFilms)
 
     }
     console.groupEnd()
 
     console.groupCollapsed("every");
     {
+        const allFilmsNewerThan2000 = films.every((film) => {
+            return film.year > 1900
+        })
+        console.log(allFilmsNewerThan2000)
 
     }
     console.groupEnd()
 
     console.groupCollapsed("map");
     {
+        const filmTitles = films.map((film) => {
+            return film.title
+        })
 
+        const filmCardViewModels = films.map((film) => ({
+            title: `${film.title} (${film.year})`,
+            stars: (film.ratings.reduce((sum, num) => sum + num) / film.ratings.length / 2).toFixed(1)
+        }))
+
+        const filmTitlesLong = films.map((film) => {
+            const avg = Number((film.ratings.reduce((sum, num) => sum + num) / film.ratings.length / 2).toFixed(1))
+            let stars = ""
+            for (let i = 1; i < 5; i++) {
+                if (avg - i > 0.5) {
+                    stars += "★"
+                } else {
+                    stars += "✰"
+                }
+            }
+
+            return `${film.title} ${film.year} ${stars}`
+        })
+
+
+
+        console.log(filmTitles)
+        console.table(filmCardViewModels)
+        console.table(filmTitlesLong)
     }
     console.groupEnd()
 
