@@ -54,7 +54,7 @@
     }];
 
 
-    console.group("forEach");
+    console.groupCollapsed("forEach");
     {
         films.forEach((film) => {
             console.log(film.roles);
@@ -67,29 +67,32 @@
 
     console.group("filter");
     {
-
+        const resultFilter = films.filter((film) => {
+            return film.year > 2000
+        })
+        console.log(resultFilter)
     }
     console.groupEnd()
 
-    console.group("some");
+    console.groupCollapsed("some");
     {
 
     }
     console.groupEnd()
 
-    console.group("every");
+    console.groupCollapsed("every");
     {
 
     }
     console.groupEnd()
 
-    console.group("map");
+    console.groupCollapsed("map");
     {
 
     }
     console.groupEnd()
 
-    console.group("reduce");
+    console.groupCollapsed("reduce");
     {
 
     }
