@@ -1,5 +1,13 @@
 class House {
+  #address;
+  #city;
+  #owner;
 
+  constructor(address, city, owner = []) {
+    this.#address = address;
+    this.#city = city;
+    this.#owner = owner;
+  }
 }
 
 const houses = [
@@ -11,7 +19,7 @@ const houses = [
 
 console.groupCollapsed('1. HouseInstance.owners savybės inkapsuliacija');
 {
-
+  console.log(houses[0])
 }
 console.groupEnd();
 
