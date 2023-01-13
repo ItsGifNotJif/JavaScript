@@ -48,7 +48,7 @@
     #owners;
 
     constructor(address, city, owners) {
-      this.#address = address;
+      this.address = address;
       this.setCity(city);
       this.setOwners(owners);
     }
@@ -63,6 +63,7 @@
       if (adr.length > 32) {
         console.error("Error: adress must be shorter than 32 characters")
       }
+      console.log(`%cnewAdress are accepted: \n\t ${adr}`, "color: green")
     }
 
     getAddress() {
@@ -173,7 +174,7 @@
       this.setOwners(owners);
     }
 
-    setAddress(adr) {
+    set address(adr) {
       if (typeof adr !== "string") {
         console.error("Error: adress must be a valid string")
       }
@@ -183,9 +184,10 @@
       if (adr.length > 32) {
         console.error("Error: adress must be shorter than 32 characters")
       }
+      console.log(`%cnewAdress are accepted: \n\t ${adr}`, "color: green")
     }
 
-    getAddress() {
+    get address() {
       return this.#address
     }
 
@@ -264,9 +266,11 @@
 
   console.group('2. Perrašykite HouseInstance.address savybės inkapsuliaciją naudojant naują sintaksę');
   {
-    house.setAddress(9)
-    house.setAddress("2")
-    house.setAddress("Kaunas")
+    console.log(house.address)
+    house.address = "Some street. 2"
+    house.address = "2"
+    house.address = "Kaunas"
+    house.address = 2
   }
   console.groupEnd();
 
