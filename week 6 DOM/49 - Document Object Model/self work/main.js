@@ -16,9 +16,33 @@ buttonPrank.addEventListener("click", prankFunction);
 
 
 
+//Creating a square in HTML
+
+function getRGB() {
+    const a = Math.floor(Math.random() * 255)
+    const b = Math.floor(Math.random() * 255)
+    const c = Math.floor(Math.random() * 255)
+    return a + ", " + b + ", " + c
+}
+
+let squareCount = 0;
 const addSquareButton = document.querySelector(".square_button");
+const containerDiv = document.querySelector(".container_for_squares");
+const addSquareWithRandomColor = () => {
+    squareCount++;
+    const square = document.createElement("SPAN");
+    square.style.width = "100px";
+    square.style.height = "100px";
+    const color = getRGB();
+    square.style.background = `rgb(${color})`;
+    square.style.margin = "5px";
+    square.style.display = "inline-block";
+    square.innerHTML = squareCount;
+    containerDiv.appendChild(square);
+    square.classList.add("generated_square")
+}
 
-
+addSquareButton.addEventListener("click", addSquareWithRandomColor)
 
 
 
