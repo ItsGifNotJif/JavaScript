@@ -1,0 +1,12 @@
+body {
+    background-color: lightgray
+}
+
+.w-400px {
+    width: 400px;
+}
+
+.center-childer {
+    display: grid;
+    place-items: center;
+}
