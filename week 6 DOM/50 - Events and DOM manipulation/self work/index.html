@@ -15,17 +15,15 @@
     <script src="5.js" defer></script>
     <script src="6.js" defer></script>
     <script src="7.js" defer></script>
-    <script src="8.js" defer></script>
     <script src="9.js" defer></script>
     <script src="10.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <style>
-        div {
-            margin: 10px;
+        section {
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
     </style>
-
-
 </head>
 
 <body>
@@ -130,14 +128,33 @@
             <h3>9. Sukurkite kvadračiuką, select'ą ir mygtuką. Paspaudus mygtuką susikuria kvadračiukas su
                 dydžiu nurodytu select'e (3 options - sm, md, lg)</h3>
         </article>
+        <select id="sizeSelect">
+            <option value="sm">Small</option>
+            <option value="md">Medium</option>
+            <option value="lg">Large</option>
+        </select>
+        <button id="submitSize">Submit size</button>
+        <div id="square9"></div>
     </section>
 
     <section class="container py-5">
         <article>
             <h3>10. Sukurkite kvadračiuką, mygtuką ir 2 select'us (po 3 option). Vienas selektas skirtas
                 pasirinkti kvadračiuko spalvai, kitas dydžiui. Paspaudus mygtuką turi susikurti kvadračiukas
-                nuropdytas pagal pasirinkimus selektuose </h3>
+                nurodytas pagal pasirinkimus selektuose </h3>
         </article>
+        <select id="colorSelectOne">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        <select id="sizeSelectOne">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+        <button id="submitParameters">Submit Parameters</button>
+        <div id="square10"></div>
     </section>
 </body>
 
