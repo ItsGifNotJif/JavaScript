@@ -61,6 +61,11 @@
         const password = formData.get("password")
         const remember = formData.get("remember")
 
+        console.log({
+            email,
+            password,
+            remember
+        })
     }
 
     loginForm.addEventListener("submit", handleLogin);
