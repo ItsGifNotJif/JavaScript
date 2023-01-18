@@ -16,20 +16,21 @@
 </head>
 
 <body>
+
     <div class="center-childer vh-100">
-        <form class="w-400px shadow p-3 rounded-0 card js-login" >
+        <form class="w-400px shadow p-3 rounded-0 card js-login">
             <h1 class="text-center fw-normal">Login</h1>
             <div class="mb-3">
                 <label for="login-email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="login-email">
+                <input type="email" class="form-control" id="login-email" name="email">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
-                <label for="loginPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="loginPassword">
+                <label for="login-Password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="login-password" name="password">
             </div>
             <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="login-remember">
+                <input type="checkbox" class="form-check-input" id="login-remember" name="remember">
                 <label class="form-check-label" for="login-remember">Check me out</label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
