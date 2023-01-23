@@ -40,10 +40,19 @@
 
     console.log("fuction is typed depending on whether promise is kept or no")
 }
-
 {
-    invitedForADate
-        .ifSheAccepts(washTheCar)
-        .ifSheAccepts(doSomethingElse)
-        .ifSheRefuses(hangOutWithTheBoys)
+    fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => {
+            if (response.status !== 200) {
+                throw new Error("bad response")
+            }
+            console.log(response);
+
+            //Assuming data is in JSON format, convert them into Javascript object
+            return response.json();
+        })
+        .then((todos) => console.log((todos)))
+        .catch(() => {
+            console.log("bad luck")
+        });
 }
