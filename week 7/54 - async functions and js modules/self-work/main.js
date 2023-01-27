@@ -15,3 +15,5 @@ const fetchData1 = async () => {
     return ("correct answer");
     throw ("incorrect answer")
 }
+
+fetchData1()
