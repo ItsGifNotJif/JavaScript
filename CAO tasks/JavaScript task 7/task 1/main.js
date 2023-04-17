@@ -1,0 +1,1 @@
+const ageField = document.querySelector("form").addEventListener("submit", displaySum)
