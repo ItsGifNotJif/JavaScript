@@ -1,4 +1,5 @@
 //Example 1 of Login Form data gathering
+//Best used when there are only 1 or 2 input fields
 (() => {
 
     const loginForm = document.querySelector(".js-login");
@@ -24,6 +25,7 @@
 }) /*()*/;
 
 //Example 2. Gathering login form data by converting it into an array. Uses "name" attribute
+//Can be used under assumption other people editing the code know about "name" attribute in html and there are no repeating "name" attributes
 (() => {
 
     const loginForm = document.querySelector(".js-login");
@@ -50,6 +52,7 @@
 
 
 //Example 3. Gathering form data using "Form Data" prototype
+//Best used everywhere
 (() => {
 
     const loginForm = document.querySelector(".js-login");
