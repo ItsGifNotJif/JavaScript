@@ -1,0 +1,13 @@
+body {
+    background-color: silver;
+}
+
+
+.center-childer {
+    display: grid;
+    place-items: center;
+}
+
+.w-400px {
+    width: 400px;
+}
