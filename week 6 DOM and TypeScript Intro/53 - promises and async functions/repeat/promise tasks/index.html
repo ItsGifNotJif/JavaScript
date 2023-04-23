@@ -24,34 +24,20 @@
         <div class="js-alert-container">
         </div>
         <div class="row my-4">
-            <div class="col-7">
+            <div class="col-8">
                 <label for="user-select" class="form-label">Select users</label>
                 <select class="form-select my-2" id="user-select">
-                    <option selected>Users</option>
+                    <option selected disabled>Users</option>
                 </select>
-                <table class="table table-success table-striped shadow ">
+                <table class="js-todos-table table table-success table-striped shadow d-none ">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Text</th>
+                            <th scope="col">Is complete?</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
