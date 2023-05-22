@@ -45,7 +45,7 @@
     console.log(randomNum)
 
     //random 5 to 12 
-    let randomNum2 = Math.round(Math.random() * (12 - 5) + 5)
+    let randomNum2 = Math.round(Math.random() * (12 - 5 +1) + 5)
     console.log(randomNum2)
 }
 

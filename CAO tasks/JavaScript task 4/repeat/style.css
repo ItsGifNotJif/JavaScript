@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(205, 198, 198);
+}
+
+button {
+    display: grid;
+}
+
+div {
+    border: 2px solid black;
+    height: 140px;
+    overflow: auto;
+    margin: 10px 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#noCopy {
+    color: greenyellow;
+    background-color: grey;
+
+}
+
+.dontClickButton {
+    height: 40px;
+    margin: 0 auto;
+    background-color: red;
+    font-size: 20px;
+    color: black;
+    align-items: center;
+    padding: 10px;
+
+}
+
+#dontMoveMouse {
+    height: 150vh;
+    line-height: 140vh;
+    align-items: center;
+    background-color: white;
+}
