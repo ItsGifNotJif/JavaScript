@@ -1,0 +1,27 @@
+body {
+    background-color: grey;
+}
+
+.taskOne,
+.taskTwo {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 15px;
+    width: 40%;
+}
+
+.taskTwo {
+    color: white;
+    font-size: 30px;
+}
+
+#militaryRecruit {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.taskTwo label {
+    font-size: 25px;
+    color: black;
+}

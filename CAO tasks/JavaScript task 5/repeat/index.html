@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <style>
+        div {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <div id="buttonInlineClick">
+        <button onclick="alertName()">Click For Alert Inline</button>
+        <script>
+            function alertName() {
+                alert("Dorian")
+            }
+        </script>
+    </div>
+    <div id="buttonEventListenerClick">
+        <button id="clickforalert">Click For Alert Event Listener</button>
+        <script>
+            document.getElementById("clickforalert").addEventListener("click", alertName)
+            function alertName() {
+                alert("Dorian")
+            }
+        </script>
+    </div>
+    <div id="buttontosummontext">
+        <button id="addtext">Click to add text</button>
+        <script>
+            document.getElementById("addtext").addEventListener("click", sometext)
+            function sometext() {
+                const lorem = "lorem ipsum something rather i forgot how it goes"
+                let newDiv = document.createElement("div")
+                let newText = document.createTextNode(lorem)
+                newDiv.appendChild(newText);
+                document.getElementById("buttontosummontext").appendChild(newDiv)
+            }
+        </script>
+    </div>
+    <div id="counterh1">
+        <button id="addone">Add 1 to Value</button>
+        <script>
+            let div = document.createElement("div");
+            div.id = "myDiv";
+            document.getElementById("counterh1").appendChild(div);
+
+            let text = document.createElement("p");
+            text.innerHTML = "0";
+            div.appendChild(text);
+
+            document.getElementById("addone").addEventListener("click", addNumber);
+            function addNumber() {
+                let currentNum = parseInt(text.innerHTML);
+                currentNum++;
+                text.innerHTML = currentNum;
+            }
+        </script>
+    </div>
+    <div id="failureToCopy">
+        <p oncopy="alert(`Error: this paragraph can't be copied`)">Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Hic, asperiores maiores eaque tempore natus iure necessitatibus amet illo veniam vero.</p>
+    </div>
+    <div id="randomNumGen">
+        <div id="button-container"></div>
+        <div id="number"></div>
+        <script>
+            function genRandomNum() {
+                let randomNumber = Math.floor(Math.random() * (100 - 1) + 1)
+                let numberDiv = document.getElementById("number");
+                while (numberDiv.firstChild) {
+                    numberDiv.removeChild(numberDiv.firstChild);
+                }
+                let h1 = document.createElement("h1");
+                let h1Text = document.createTextNode(randomNumber);
+                h1.appendChild(h1Text);
+                numberDiv.appendChild(h1);
+            }
+            function createButton() {
+                let button = document.createElement("button");
+                button.innerHTML = "Generate random number between 1 and 100";
+                button.addEventListener("click", genRandomNum);
+                document.getElementById("button-container").appendChild(button);
+            }
+            createButton();
+        </script>
+    </div>
+    <div id="guessvalue">
+        <button id="one">One</button>
+        <button id="two">Two</button>
+        <button id="three">Three</button>
+        <script>
+            let a;
+            document.getElementById("one").addEventListener("click", function () {
+                a = 1;
+                checkAnswer(a);
+            });
+            document.getElementById("two").addEventListener("click", function () {
+                a = 2;
+                checkAnswer(a);
+            });
+            document.getElementById("three").addEventListener("click", function () {
+                a = 3;
+                checkAnswer(a);
+            });
+            let b = Math.floor(Math.random() * (3 - 1) + 1);
+            function checkAnswer(a) {
+                if (a == b) {
+                    alert("Correct");
+                } else {
+                    alert("Incorrect");
+                }
+            }
+        </script>
+    </div>
+    <div id="hover-alert">
+        <h1 id="large-header">Some text here</h1>
+        <script>
+            let header = document.getElementById("large-header");
+            header.style.height = "150vh";
+            header.style.width = "150vh";
+            header.addEventListener("mouseover", function () {
+                alert("Don't move the mouse!");
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>
