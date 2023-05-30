@@ -13,11 +13,11 @@
         resultDiv.innerHTML = "";
         let lastLine = "";
         let sizeIndicator = shapeSize.value;
-        for (let i = 0; i < sizeIndicator ; i++) {
+        for (let i = 1; i < sizeIndicator; i++) {
             resultDiv.innerHTML += shapeContent + "<br>"
             lastLine += shapeContent;
         }
-        resultDiv.innerHTML += lastLine;
+        resultDiv.innerHTML += lastLine + shapeContent;
 
     }
 }
@@ -31,15 +31,18 @@
     let shapeContentC = "C";
     let resultDiv2 = document.getElementById("resultDiv2")
 
+
     function paintShapeC(event) {
         event.preventDefault();
         resultDiv2.innerHTML = "";
         let firstLastLine = " ";
+        let shapeLines = " ";
         let sizeIndicator1 = shapeSizeC.value;
-        for (let i = 0; i < sizeIndicator1; i++) {
-            resultDiv2.innerHTML += shapeContentC + "<br>"
-            firstLastLine += shapeContentC
+        for (let i = 2; i < sizeIndicator1; i++) {
+            shapeLines += shapeContentC + "<br>";
+            firstLastLine += shapeContentC;
         }
-        resultDiv2.innerHTML += firstLastLine;
+
+        resultDiv2.innerHTML = firstLastLine + shapeContentC + "<br>" + shapeLines + firstLastLine + shapeContentC;
     }
 }
