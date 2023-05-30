@@ -1,0 +1,19 @@
+body {
+    background-image: url("https://images7.alphacoders.com/369/thumb-1920-369182.jpg");
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div {
+    margin: 20px;
+    border: 3px solid white;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.541);
+
+}
+
+form {
+    font-size: 15px;
+    color: white;
+}
