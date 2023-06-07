@@ -10,6 +10,7 @@
             alert("Vroom")
         }
         getPrice = function () {
+            
             if (this.engine === "electric") {
                 return this.basePrice + 10000;
             } else if (this.engine === "diesel") {
