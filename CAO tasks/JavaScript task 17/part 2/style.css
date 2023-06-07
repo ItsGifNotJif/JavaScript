@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.taskTwoResult {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+img {
+    width: 200px;
+}

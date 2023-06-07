@@ -14,6 +14,7 @@
             if (this.engine === "electric") {
                 return this.basePrice + 10000;
             } else if (this.engine === "diesel") {
+                
                 return this.basePrice + 5000
             } else {
                 return this.basePrice
