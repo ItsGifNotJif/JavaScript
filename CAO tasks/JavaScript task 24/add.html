@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="input.js" defer></script>
+</head>
+
+<body>
+    <div class="intro">
+        <h1>Add your property for sale</h1>
+        <h3>Sell your property and get paid cash</h3>
+    </div>
+    <div class="addPropertyPrice" id="addPropertyPrice">
+        <h2>Add property</h2>
+        <div class="submissionInfo" id="submissionInfo">
+            <label for="addImage">IMG</label>
+            <input type="url" name="imgURL" placeholder="www.google.com/img">
+            <label for="addPrice">Price, EUR</label>
+            <input type="number" name="priceInput" placeholder="50000">
+            <label for="describe">Description</label>
+            <input type="text" name="description" placeholder="Describe property"></input>
+            <label for="city">City</label>
+            <select id="dropdown">
+                <option value="option1">Tokyo</option>
+                <option value="option2">Osaka</option>
+                <option value="option3">Fujyiama</option>
+            </select>
+        </div>
+        <div class="addInfo" id="addInfo">
+            <form id="infoSubmissionForm">
+                <button type="submit">Add Properties</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
