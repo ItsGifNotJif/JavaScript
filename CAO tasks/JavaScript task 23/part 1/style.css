@@ -1,0 +1,48 @@
+table {
+    border: 1px solid black;
+    gap: 10px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+tr {
+    border: 1px solid black;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+ul.navbar li {
+    float: left;
+}
+
+ul.navbar li a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #ddd;
+}
+
+/* CSS styles for active page link */
+ul.navbar li.active a {
+    background-color: #4CAF50;
+    color: white;
+}
