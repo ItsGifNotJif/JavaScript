@@ -27,6 +27,7 @@
             const itemDelete = document.createElement("button");
             itemDelete.classList.add("cardDelete");
             itemDelete.textContent = "Delete";
+            itemDelete.id = "deleteButton-" + item.id;
 
             itemCard.append(itemHeader);
             itemCard.append(itemName);
@@ -34,7 +35,12 @@
             itemCard.append(itemDelete);
 
             itemContainer.appendChild(itemCard);
+
         })
+        items.forEach(item => {
+            const deleteButton = document.getElementById("deleteButton-" + item.id);
+            deleteButton.addEventListener("click", () => deleteItem(item.id));
+        });
     }
 
     function fetchItems() {
@@ -54,5 +60,22 @@
             })
     }
 
+    function deleteItem(itemId) {
+        fetch("https://golden-whispering-show.glitch.me/" + itemId, {
+            method: "DELETE"
+        })
+            .then(response => {
+                if (response.ok) {
+                    console.log("item deleted");
+                    window.location.href = "index.html"
+                } else {
+                    console.error("item failed to delete")
+                }
+            })
+            .catch(error => {
+                console.error("error occured", error)
+            })
+    }
 
 }
+
