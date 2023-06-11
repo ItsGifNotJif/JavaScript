@@ -1,0 +1,60 @@
+#taskDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 1px solid black;
+    width: 24%;
+    text-align: center;
+}
+
+.cardImage {
+    max-width: 100%;
+}
+
+.cardDelete {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 50%;
+}
+
+#inputDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+#inputDiv input {
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    bordeR: 1px solid grey;
+}
+
+#inputDiv button {
+    width: 10%;
+    padding: 5px;
+    color: grey;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
